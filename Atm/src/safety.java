@@ -4,7 +4,7 @@ public class safety {
 
     static int pinn;// this one is real password
     static int pinn2; //this one is the 'taken from customer'
-    int change=3;
+    int chance=3;// this one is wrong password chance
     boolean safe; //it's for is safe or not
 
 
@@ -32,16 +32,16 @@ public class safety {
         System.out.println("Enter your password.");
         Scanner wanna2 = new Scanner(System.in);
         pinn2=wanna2.nextInt();
-        change=change-1;
+        chance=chance-1;
         if (pinn==pinn2){
             System.out.println("Log in is successfull !!");
             safe=true; // that's means is "that's true customers"
         }
-        else if(change>0 && pinn!=pinn2){
-            System.out.println("Wrong password.Try again.You have "+change+" more change.");
+        else if(chance>0 && pinn!=pinn2){
+            System.out.println("Wrong password.Try again.You have "+chance+" more chance.");
             login();
         }
-        else if(change==0){
+        else if(chance==0){
             System.out.println("Wrong password !!!");
             safe=false; // that's means is "that's wrong customers"
             //System.exit(0);
